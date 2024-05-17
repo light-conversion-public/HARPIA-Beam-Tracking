@@ -1,0 +1,24 @@
+{
+  "app_name": "HARPIA beam tracking",
+  "description": "Tracks beam parameter dynamics while moving the delay line",
+  "documentation_link": "README.md",
+  "version": "1.0",
+  "homepage": "https://github.com/light-conversion-public/HARPIA-Beam-Tracking",
+  "guid": "34220e4c-5e92-44ed-9f51-8a4e930a7bea",
+  "connections": [
+    {
+      "connection_id": "harpia",
+      "name": "HARPIA REST",
+      "required": true,
+      "type": "REST",
+      "target": "HARPIA"
+    },
+    {
+      "connection_id": "camera",
+      "name": "CAMERAAPP REST",
+      "required": true,
+      "type": "REST",
+      "target": "CAMERAAPP"
+    }
+  ]
+}
