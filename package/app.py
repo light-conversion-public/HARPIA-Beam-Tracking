@@ -176,8 +176,8 @@ class MainWindow(QMainWindow):
         f = [np.poly1d(np.polyfit(x,y[0],1))(fx), np.poly1d(np.polyfit(x,y[1],1))(fx) ]
         lns = []
 
-        lns = lns + self.sc[0].ax1.plot(x, y[0], '.-', color='C0', label = '$\\Delta X$ {:.0f} um'.format((np.max(y[0]) - np.min(y[0]))/1.0e3))
-        lns = lns + self.sc[0].ax2.plot(x, y[1], '.-',color='C1', label = '$\\Delta Y$ {:.0f} um'.format((np.max(y[1]) - np.min(y[1]))/1.0e3))    
+        lns = lns + self.sc[0].ax1.plot(x, y[0], '.-', color='C0', label = '$\\Delta X$ {:.0f} um'.format((np.max(y[0]) - np.min(y[0]))*1.0e3))
+        lns = lns + self.sc[0].ax2.plot(x, y[1], '.-',color='C1', label = '$\\Delta Y$ {:.0f} um'.format((np.max(y[1]) - np.min(y[1]))*1.0e3))    
         self.sc[0].ax1.plot(fx, f[0], '--', color='C0')
         self.sc[0].ax2.plot(fx, f[1], '--',color='C1')  
         self.sc[0].ax1.set_ylabel('X beam position, mm')
